@@ -32,7 +32,8 @@ def card_label(card, format: :short)
     "#{label}#{icon}" 
   else 
     "#{label} of #{card_suit}" 
-  end 
+  end
+end
   def play(deck) 
   player_hand = deal_cards(deck, 2) 
   dealer_hand = deal_cards(deck, 2) 
@@ -106,7 +107,7 @@ def deal_cards(cards, amount)
     raise "No more cards to deal, game over!" 
   end 
 end 
-end 
+
 shuffled_deck = shuffle_deck(generate_deck) 
 choice = 'y' 
 while(shuffled_deck.length > 4 && choice.downcase != 'n') do # need at least 4 cards to play 
